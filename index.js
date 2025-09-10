@@ -1,22 +1,8 @@
-// arithmetic operators =  operands (values, variables, etc.)
-//                         operators (+ - * /)
-//                         ex: 11 = x+5;
+/*Operator Preecedence*/
+// 1. Parenthesis ()
+// 2. Exponents
+// 3. multiplication & division & modulo 
+// 4. addtion & subtraction
 
-let a = 11;
-
-a = a+1;
-// a = a - 1;
-// a = a * 2;
-// a = a / 2;
-
-// a = a ** 30;
-
-a+=50;
-a-=1;
-a/=2;
-a**=2;
-a%=2;
-
-a++;
-// a--;
-console.log(a);
+let result = 1 + 2 * 3+4 ** 2;
+console.log(result);
