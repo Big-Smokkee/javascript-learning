@@ -1,18 +1,27 @@
-// How to accept user input
-
-// 1. Easy way = window prompt
-// 2. Professional way = HTML textbox
+//Type conversion - change datatype of value
 
 
-//Easy way = window prompt
-// let username;
-// username = window.prompt(`what's you username?`);
-// document.getElementById('a').textContent = `You typed ${username}`
+// In this way everything user inputs save as string. So age+=1 gets concatenated. for solving this we can use line 9 method..Number(variable)
+// let age = window.prompt("How old are you?");
+// age++;
+// age += 1;
+// console.log(age);
 
-// Professional way
-let username;
-document.getElementById("submit").onclick = function () {
-    username = document.getElementById("name").value;
-    // console.log(username);
-    document.getElementById("myH1").textContent = ` at the website ${username}`;
-}
+// let age = window.prompt("What is your age?");
+// console.log( typeof age);
+// age = Number(age);
+// console.log( typeof age);
+// age += 1;
+// console.log(age);
+
+let x = `faraz`;
+let y = 'faraz';
+let z = 'faraz';
+x = Number(x);
+
+y = String(y);
+
+z = Boolean(x);
+console.log(x, typeof x);
+console.log(y, typeof y);
+console.log(z, typeof z);
