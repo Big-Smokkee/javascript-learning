@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>This is a test</title>
 </head>
 
 <body>
-    <h1 id=myH1>Enter the radius of a circle</h1>
-    <input type="text" name="radius" id="radius-box">
-    <br>
-    <input type="submit" value="dive-in" id="submit-button">
+    <label for="counting" id="count-label">0</label>
+    <div id="btn-container">
+        <button id="decrease-btn">Decrease</button>
+        <button id="reset-btn">Reset</button>
+        <button id="increase-btn">Increase</button>
 
-    <h3 id="ans"></h3>
+    </div>
+
     <script src="index.js"></script>
 </body>
 

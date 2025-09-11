@@ -1,3 +1,24 @@
 body{
     font-family: verdana;
 }
+
+#count-label{
+    display: block;
+    text-align: center;
+    font-size: 10em;
+
+}
+#btn-container{
+    display: block;
+    text-align: center;
+}
+#btn-container button{
+    padding: 16px 30px;
+    font-size: 1.5em;
+    background-color: aquamarine;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+#btn-container button:hover{
+    background-color: rgba(127, 146, 255, 0.457);
+}
