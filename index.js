@@ -1,27 +1,30 @@
-//Type conversion - change datatype of value
+//   const = "a variable that can't be changed"
+
+// const PI = 3.14159;
+// let radius;
+// let circumferences;
+
+// //what is I changed pi variable value
+// // pi = 9458490;
+
+// // so the best practice is using const pi.. After that we can't make any changes to it
+
+// // PI = 30.14159;
+// radius = window.prompt("enter the radius os a circle: ");
+// radius = Number(radius);
+// circumferences = 2 * PI * radius;
+
+// console.log(circumferences);
 
 
-// In this way everything user inputs save as string. So age+=1 gets concatenated. for solving this we can use line 9 method..Number(variable)
-// let age = window.prompt("How old are you?");
-// age++;
-// age += 1;
-// console.log(age);
 
-// let age = window.prompt("What is your age?");
-// console.log( typeof age);
-// age = Number(age);
-// console.log( typeof age);
-// age += 1;
-// console.log(age);
+// user website
+const PI = 3.14159;
 
-let x = `faraz`;
-let y = 'faraz';
-let z = 'faraz';
-x = Number(x);
-
-y = String(y);
-
-z = Boolean(x);
-console.log(x, typeof x);
-console.log(y, typeof y);
-console.log(z, typeof z);
+document.getElementById("submit-button").onclick = function () {
+    let radius = document.getElementById("radius-box").value;
+    radius = Number(radius);
+    let conference = 2 * PI *radius;
+    document.getElementById("ans").textContent = `The answer is : ${conference}.`;
+    // console.log(conference);
+}
