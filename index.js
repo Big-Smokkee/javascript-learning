@@ -1,21 +1,42 @@
-//count program
+// Math - built in object that provides a collection of properties and methods.
+// console.log(Math.PI);
+// console.log(Math.E);
 
-const decreaseBtn = document.getElementById("decrease-btn");
-const resetBtn = document.getElementById("reset-btn");
-const increaseBtn = document.getElementById("increase-btn");
-const countLabel = document.getElementById("count-label");
+let x = 4.21;
+let y = 2.99;
+let z;
 
-let count = 0;
+z = Math.round(x);
+console.log(Math.ceil(x));
+console.log(Math.floor(y));
+console.log(Math.trunc(y));
+console.log(z);
 
-increaseBtn.onclick = function () {
-    count++;
-    countLabel.textContent = count;
-}
-decreaseBtn.onclick = function () {
-    count--;
-    countLabel.textContent = count;
-}
-resetBtn.onclick = function () {
-    count=0;
-    countLabel.textContent = count;
-}
+console.log(Math.pow(Math.round(x), 2));
+z = Math.sqrt(Math.round(x));
+let zz = 10;
+zz = Math.log(zz);
+console.log(zz);
+
+let a = 45;
+let b = 0;
+let c = 60;
+a = Math.sin(a);
+b = Math.cos(b);
+c = Math.tan(c);
+console.log(Math.trunc(a));
+console.log(Math.trunc(b));
+console.log(Math.c);
+
+a = 78;
+console.log(Math.abs(a));
+console.log(Math.sign(a));
+
+let xa = 3;
+let ya = 1;
+let za = 5;
+
+let max = Math.max(xa, ya, za);
+let min = Math.min(xa, ya, za);
+console.log(max);
+console.log(min);
