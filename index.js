@@ -1,78 +1,37 @@
-// string methods = allow you to work with text (string)
+// string slicing = Creating a substring from a portion of another string
 
-let userName = 'BroCode  ';
-console.log(userName.charAt(3)); //it prints the character at index 3;
-let ind = userName.indexOf("f"); //it will return the index number of first occurance of f..na paile -1
-console.log(`Index of C is ${ind}`);
-console.log(`The length of userName is: ${userName.length}`);//Length returns the length of a string.
+// syntex:   String.slice(start_index, end_index + 1)
 
-//trim function will trim all of the white spaces
-console.log(`Before ${userName} length = ${userName.length}`);
-userName = userName.trim();
-console.log(`After ${userName} length = ${userName.length}`);
+// note: the ending index is exclusive.. If we need to slice a substring from the middle to the last index we dont need to write the ending index on .slice parameters.....
+const fullName = "Fardin Faraz";
 
-// .trim() can't tri, spaces between a string
-let newUserName = "Fardin   Faraz";
-newUserName = newUserName.trim();
-console.log(`${newUserName} length = ${newUserName.length}`);
+let firstName = fullName.slice(0, 6);
+let lastName = fullName.slice(7);
+console.log(firstName);
+console.log(lastName);
 
-// .toUpperCase() this thing uppercases all of the characters
-newUserName = newUserName.toUpperCase();
-console.log(newUserName);
+// for the first character we can use .slice(0, 1);
 
-// .toLowerCase() this thing lowercases all of the characters
-newUserName = newUserName.toLowerCase();
-console.log(newUserName);
+let firstChar = fullName.slice(0, 1);
+console.log(firstChar);
 
-// .repeat(how many times)
-console.log(userName.repeat(2));
-
-// .startsWith(character) --> This will return a boolean :it is used to determine if a string is starting with a given character
-let str = "abcdefgh";
-let flag = str.startsWith("a");
-if (flag)
-{
-    console.log(`Yes`);
-}
-else
-{
-    console.log(`No`);
-}
-//boolean means
-console.log(flag);
-
-// .endsWith(character) --> This will return a boolean :it is used to determine if a string is ending with a given character
-let str2 = "abcdefgh";
-let flag2 = str.endsWith("h");
-if (flag2)
-{
-    console.log(`Yes`);
-}
-else
-{
-    console.log(`No`);
-}
-// .includes(character) it returns if the charater incluedes in the string or not
-let fullName = "Fardin Faraz";
-let flag3 = fullName.includes(".");
-if (flag3) {
-    console.log("your name contains a or many space");
-}
-else
-{
-    console.log("It doesn't contain any spaces");
-}
-
-// .replaceAll(character for replacing, character to be replaced)
-let phone = "01912-916342";
-phone = phone.replaceAll("-", "//");
-console.log(phone);
+//if we use any negative index we will beginb at the end....... .slice(-1);
+// for the last character
+let lastChar = fullName.slice(-1);
+console.log(lastChar);
 
 
-// .padStart(number,"desired string") it is a way of telling that how many characters should the string be....If the number is less than the length of the string, it simply outputs the string....But if the number is greater than the length of string, it maintains the number by using white spaces or by the desired character... Pad
-phone = phone.padStart(15, '0');
-console.log(phone);
 
-// .padEnd(number,"desired string") ager tar moton aee vai...khakli oi ta shamne pad kore...eta last aee pad kore
-phone = phone.padEnd(20, '0');
-console.log(phone);
+// eshob guna gunir jhamela baad dite
+
+let firstNameUltimate = fullName.slice(0, fullName.indexOf(" "));
+console.log(firstNameUltimate);
+let lastNameUltimate = fullName.slice(fullName.indexOf(" ")+1);
+console.log(lastNameUltimate);
+
+
+const email = "fardinfaraz@gmail.com";
+let username = email.slice(0, email.indexOf("@"));
+let extension = email.slice(email.indexOf("@")+1);
+console.log(username);
+console.log(extension);
