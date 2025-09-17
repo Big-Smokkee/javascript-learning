@@ -1,37 +1,43 @@
-// string slicing = Creating a substring from a portion of another string
-
-// syntex:   String.slice(start_index, end_index + 1)
-
-// note: the ending index is exclusive.. If we need to slice a substring from the middle to the last index we dont need to write the ending index on .slice parameters.....
-const fullName = "Fardin Faraz";
-
-let firstName = fullName.slice(0, 6);
-let lastName = fullName.slice(7);
-console.log(firstName);
-console.log(lastName);
-
-// for the first character we can use .slice(0, 1);
-
-let firstChar = fullName.slice(0, 1);
-console.log(firstChar);
-
-//if we use any negative index we will beginb at the end....... .slice(-1);
-// for the last character
-let lastChar = fullName.slice(-1);
-console.log(lastChar);
+// Method chaining = calling one method after another in one continues line of code...
 
 
 
-// eshob guna gunir jhamela baad dite
+///Amar mone hoitese jinish ta c++ er continue er moto
 
-let firstNameUltimate = fullName.slice(0, fullName.indexOf(" "));
-console.log(firstNameUltimate);
-let lastNameUltimate = fullName.slice(fullName.indexOf(" ")+1);
-console.log(lastNameUltimate);
+let username = window.prompt("Enter your User Name");
+// console.log(username);
+/*              No method chaining
+//1ta solution
+// username = username.toUpperCase();
+// username = username.replace('f', "F");
+// username = username.replace('f', "F");
+// console.log(username);
+
+//2nd
+// username = username.replaceAll('f', 'F');
+// console.log(username);
 
 
-const email = "fardinfaraz@gmail.com";
-let username = email.slice(0, email.indexOf("@"));
-let extension = email.slice(email.indexOf("@")+1);
+//3rd (bro Code)
+let firstLetter = username.charAt(0);
+firstLetter = firstLetter.toUpperCase();
+
+let extraChars = username.slice(1);
+extraChars = extraChars.toLowerCase();
+// console.log(firstLetter);
+// console.log(extraChars);
+username = firstLetter + extraChars;
 console.log(username);
-console.log(extension);
+// username = username.replaceAll(username.in, 'F');
+
+*/
+
+///Here comes method chaining
+
+// boom boom combos
+username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLowerCase();
+
+console.log(username);
+
+
+///Daruuun
