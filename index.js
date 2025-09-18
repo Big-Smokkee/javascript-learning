@@ -1,19 +1,13 @@
-// Logical operator = used to combine or manipulate boolean values (true or false)
-// mojar kotha hoilo eshb kichu c++ er motoi
-// And = && , OR = ||, NOT = !
-const temp = 1;
-if (temp <= 0 || temp >= 30) {
-    console.log("Weather isn't good");
-}
-else
-    {
-    console.log("The weather is good");
-}
+//  = assignment operator
+//  == comparison operator (Compare if values are equal)
+//  === strict equality operator (compare if values & datatype are equal) // This is mostly used in passwords
+//  != inequality operator
+//  !== strict inequality operator
 
-const isSunny = true;
-if (!isSunny) {
-    console.log("It is cloudy");
-}
-else {
-    console.log("It is sunny");
-}
+const PI = "3.14";
+console.log(typeof PI);
+// if (PI === 3.14)//okkhon eta number
+if(PI === "3.14") //okkhon eta string
+    console.log("That is PI");
+else
+    console.log("That is not PI");
