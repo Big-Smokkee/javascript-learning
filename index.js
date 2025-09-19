@@ -1,13 +1,39 @@
-//  = assignment operator
-//  == comparison operator (Compare if values are equal)
-//  === strict equality operator (compare if values & datatype are equal) // This is mostly used in passwords
-//  != inequality operator
-//  !== strict inequality operator
+// while-looop
 
-const PI = "3.14";
-console.log(typeof PI);
-// if (PI === 3.14)//okkhon eta number
-if(PI === "3.14") //okkhon eta string
-    console.log("That is PI");
-else
-    console.log("That is not PI");
+// let user = " ";
+// user = user.trim();
+// while (user === "" || user ===null)
+// {
+//     // console.log("You didn't enter anything");
+//     // break;
+//     user = prompt("Enter your name");
+// }
+// console.log(`hello: ${user}`);
+
+// do while loop
+
+// let user;
+// while (user === "" || user === null){
+//     user = prompt("Enter your name");
+// }
+
+// console.log(`Hello ${user}`);
+
+let loggedIn = false;
+let username;
+let pass;
+
+while (!loggedIn) {
+    username = prompt("Enter your user name");
+    pass = prompt("Enter your password");
+
+    if (username === "myUsername" && pass === "myPassword")
+    {
+        loggedIn = true;
+        console.log(`You are logged in`);
+    }
+    else
+    {
+        console.log(`Invalid creadential`);
+    }
+}
