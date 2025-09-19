@@ -1,43 +1,27 @@
-// Number guessing game
+// function = a section of reusable code. Declare code once, use it whenever you want. Call tge function to execute that code
 
-const minNum = 1;
-const maxNum = 100;
+// function happyBirthday(userName, age) {
+//     console.log("Happu birthday");
+//     console.log(`Happu birthday dear ${userName}`);
+//     console.log("Happu birthday to you");
+//     console.log(`You are ${age} years old`)
+// }
+// let age = 21;
+// happyBirthday(21);
+// happyBirthday("Faraz", 21);
 
-const answer = Math.floor(Math.random() * (maxNum -minNum+1)) + minNum;
-// console.log(answer);
-
-let attempts = 0;
-let guess;
-let running = true;
-
-while (running)
+function add(x, y)
 {
-    guess = prompt(`Guess a number between ${minNum} - ${maxNum}`);
-    guess = Number(guess);
-    
-    if (isNaN(guess))
-    {
-        window.alert("Please enter a valid number");
-        // continue;
-    }
-    else if (guess < minNum || guess > maxNum)
-    {
-        window.alert("Please enter a valid number");
-        // continue;
-    }
-    else
-    {
-        attempts++;
-        if (guess < answer) {
-            window.alert("TOO LOW! TRY AGAIN");
-        }
-        else if (guess > answer)
-        {
-            window.alert("TOO High! TRY AGAIN");
-        }
-        else {
-            window.alert(`Correct! The answer was ${answer}. It took you ${attempts} attempts...`);
-            running = false;
-        }
-    }
+    let res = x + y;
+    return res;
 }
+
+let res = add(20, 5);
+console.log(res);
+
+function isValid(email)
+{
+    return email.includes("@") ? true : false;
+}
+let res1 = isValid("BroadcastChannel.com");
+console.log(res1);
