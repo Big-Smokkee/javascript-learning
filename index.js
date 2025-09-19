@@ -1,27 +1,14 @@
-// function = a section of reusable code. Declare code once, use it whenever you want. Call tge function to execute that code
-
-// function happyBirthday(userName, age) {
-//     console.log("Happu birthday");
-//     console.log(`Happu birthday dear ${userName}`);
-//     console.log("Happu birthday to you");
-//     console.log(`You are ${age} years old`)
-// }
-// let age = 21;
-// happyBirthday(21);
-// happyBirthday("Faraz", 21);
-
-function add(x, y)
+// variable scope = wehre a variable is recognized and accessible (loval vs global)
+let x = 5;
+func1();
+func2();
+function func1()
 {
-    let res = x + y;
-    return res;
+    let x = 1;
+    console.log(x);
 }
-
-let res = add(20, 5);
-console.log(res);
-
-function isValid(email)
+function func2()
 {
-    return email.includes("@") ? true : false;
+    // let x = 2;
+    console.log(x);
 }
-let res1 = isValid("BroadcastChannel.com");
-console.log(res1);
