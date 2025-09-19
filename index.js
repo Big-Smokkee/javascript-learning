@@ -1,14 +1,43 @@
-//For loop
-for (let i = 1; i <= 3; i++)
-{
-    // console.log("Hello");
-    console.log(i);
-}
-//heda edi pari
+// Number guessing game
 
-//continue
-for (let i = 1; i <= 20; i++)
+const minNum = 1;
+const maxNum = 100;
+
+const answer = Math.floor(Math.random() * (maxNum -minNum+1)) + minNum;
+// console.log(answer);
+
+let attempts = 0;
+let guess;
+let running = true;
+
+while (running)
 {
-    if (i == 13) continue;
-    console.log(i);
+    guess = prompt(`Guess a number between ${minNum} - ${maxNum}`);
+    guess = Number(guess);
+    
+    if (isNaN(guess))
+    {
+        window.alert("Please enter a valid number");
+        // continue;
+    }
+    else if (guess < minNum || guess > maxNum)
+    {
+        window.alert("Please enter a valid number");
+        // continue;
+    }
+    else
+    {
+        attempts++;
+        if (guess < answer) {
+            window.alert("TOO LOW! TRY AGAIN");
+        }
+        else if (guess > answer)
+        {
+            window.alert("TOO High! TRY AGAIN");
+        }
+        else {
+            window.alert(`Correct! The answer was ${answer}. It took you ${attempts} attempts...`);
+            running = false;
+        }
+    }
 }
