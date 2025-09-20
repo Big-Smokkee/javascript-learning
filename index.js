@@ -1,51 +1,28 @@
-// array: a variable like structure that can hold more than 1 value
+// Spread Operator = ... allows an iterable such as an array or string to be expended into seperate elements(unpacks the elements)
 
-let fruits = ["apple", "orange", "banana"]; 
-
-fruits[3] = "cocunut";
-fruits.push("cocu");
-fruits.pop();//eda last value delete koira dey
-console.log(`The length of the array is: ${fruits.length}`);
-
-fruits.unshift("mango");// it inserts mango at the front of the array
-fruits.shift(); // it remove elements from the beginning;
-console.log(fruits);
-console.log(fruits[2]); 
-
-console.log(fruits.length);
-
-let index = fruits.indexOf("Cocu");
-console.log(index); // na paile -1
+// let array = [1, 2, 3, 4, 5];
+// let maximum = Math.max(...array);
+// let minimum = Math.min(...array);
+// // console.log(array);
+// console.log(maximum);
+// console.log(minimum);
+// console.log(...array);
 
 
-// for displaying the array we can use for loop
-// console.log("Showing elements by for loop and index too");
-// for (let i = 0; i < fruits.length; i++)
-// {
-//     console.log(`Index of ${fruits[i]} is : ${fruits.indexOf(fruits[i])}`);
-// }
+// let username = "Faraz";
+// let letters = [...username];
+// console.log(letters);
 
-// console.log("Shortcut for loop");
+// // join method
+// join method simply pack the unpack array to string into variable by anything that we give into the parameter
 
-// for (let fruit of fruits) {
-//     console.log(fruit);
-// }
+// letters = letters.join("-");
+// console.log(letters);
 
-console.log("Before sorting");
-for (let i = 0; i < fruits.length; i++)
-{
-    console.log(`Index of ${fruits[i]} is : ${fruits.indexOf(fruits[i])}`);
-}
+let fruits = ["apple", "orange", "banana", "mango"];
+let vegetables = ["potatoes", "carrots", "Lemons"];
 
-
-//array sorting
-// fruits.sort();// syntex:  array_name.sort();
-// console.log(fruits);
-console.log("After sorting");
-for (let i = 0; i < fruits.length; i++)
-{
-    console.log(`Index of ${fruits[i]} is : ${fruits.indexOf(fruits[i])}`);
-}
-
-fruits.reverse();// eta reverse koira dibe
-console.log(fruits);
+//etar maddhome combine kora jaay array +++ append oo kora jay
+let newFruits = [...fruits, ...vegetables, "eggs", "milk"];
+// let newFruits = fruits + vegetables;
+console.log(newFruits);
