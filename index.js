@@ -1,28 +1,44 @@
-// Spread Operator = ... allows an iterable such as an array or string to be expended into seperate elements(unpacks the elements)
+//array.toString();
+// let names = ['a', 'b', 'c', 'd'];
+// let stringNames = names.toString();
+// console.log(names);
+// console.log(stringNames);
 
-// let array = [1, 2, 3, 4, 5];
-// let maximum = Math.max(...array);
-// let minimum = Math.min(...array);
-// // console.log(array);
-// console.log(maximum);
-// console.log(minimum);
-// console.log(...array);
+//join method
+// let names = ['a', 'b', 'c', 'd'];
+// let stringNames = names.join(" and ")
+// console.log(stringNames);
+
+//concat function
+let a = [1, 2, 3, 4];
+let b = [5, 4, 3, 2];
+let concated = a.concat(b);
+console.log(concated);
+
+//splice function
+// concated.splice(5, 2); 
+// console.log(concated);
+//or
+concated.splice(5, 2, 6,7);
+console.log(concated);
+
+// let array = ["Faraz", "daraz", "Sumaiya", "Tissue"];
+// array.splice(1, 3, "Fardin", "Tisha", "love","ganja");
+// console.log(array);
+// array.splice(4, 0, "splice diye ki insert kora jay naki dekhtesi");
+// console.log(array);
 
 
-// let username = "Faraz";
-// let letters = [...username];
-// console.log(letters);
+//index of
+// let names = ["Kamal", "uddin", "Jafory", "binte", "alal"];
+// let index = names.indexOf("binte");
+// console.log(index);
 
-// // join method
-// join method simply pack the unpack array to string into variable by anything that we give into the parameter
+//flat
+// let array = [1, 2, 3, 4, [5, 6, [7,8,["henda"]]], 9];
+// console.log(array);
+// console.log("After Flat");
 
-// letters = letters.join("-");
-// console.log(letters);
+// flat = array.flat(3);
+// console.log(flat);
 
-let fruits = ["apple", "orange", "banana", "mango"];
-let vegetables = ["potatoes", "carrots", "Lemons"];
-
-//etar maddhome combine kora jaay array +++ append oo kora jay
-let newFruits = [...fruits, ...vegetables, "eggs", "milk"];
-// let newFruits = fruits + vegetables;
-console.log(newFruits);
